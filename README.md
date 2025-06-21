@@ -1,3 +1,10 @@
+
+Check out the published page here:
+
+https://rudy-im.github.io/fullstack-portfolio/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
