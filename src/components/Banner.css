@@ -7,6 +7,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  height: 25vh;
   padding: 15px 0;
   z-index: 1000;
   transition: all 0.3s ease;
@@ -16,6 +17,7 @@
 .top-banner.scrolled {
   padding: 5px 0;
   font-size: 0.95rem;
+  height: 10vh;
 }
 
 .side-banner {
@@ -27,12 +29,25 @@
   left: 0;
   top: 0;
   height: 100vh;
-  width: 220px;
-  writing-mode: vertical-rl;
+  width: 25vw;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  animation: side-enter 0.3s ease;
   box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.side-banner.transition-on {
+  transition: height 0.3s ease;
+}
+
+@keyframes side-enter {
+  from {
+    height: 25vh;
+  }
+  to {
+    height: 100vh;
+  }
 }

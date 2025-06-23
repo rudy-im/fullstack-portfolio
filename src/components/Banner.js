@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './TopBanner.css';
+import './Banner.css';
 
-const TopBanner = () => {
+const Banner = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > window.innerHeight);
 
@@ -25,13 +25,13 @@ const TopBanner = () => {
     };
   }, [isWideScreen]);
 
-  const bannerClass = isWideScreen ? 'side-banner' : `top-banner${isScrolled ? ' scrolled' : ''}`;
+  const bannerClass = isWideScreen ? `side-banner` : `top-banner${isScrolled ? ' scrolled' : ''}`;
 
   return (
     <div className={bannerClass}>
-      <p>top banner</p>
+      <p>banner</p>
     </div>
   );
 };
 
-export default TopBanner;
+export default Banner;
