@@ -3,18 +3,15 @@ import './App.css';
 
 import React from 'react';
 import Banner from './components/Banner';
+import Main from './components/Main';
 
 function App() {
-  //const isWide = window.innerWidth > window.innerHeight;
-
   return (
     <div>
-      <Banner />
-	  <div id="main">
-	  {Array.from({ length: 100 }).map((_, i) => (
-	    <div key={i}>test</div>
-	  ))}
-	  </div>
+      
+	  
+	  <Banner />
+	  <Main />
     </div>
   );
 }

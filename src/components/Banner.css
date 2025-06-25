@@ -1,6 +1,6 @@
 .top-banner {
   background-color: #ffcc00;
-  color: #333;
+  color: #333333;
   text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
@@ -8,7 +8,7 @@
   top: 0;
   width: 100%;
   height: 25vh;
-  padding: 15px 0;
+  padding: 0 0;
   z-index: 1000;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -22,7 +22,7 @@
 
 .side-banner {
   background-color: #ffcc00;
-  color: #333;
+  color: #333333;
   font-weight: bold;
   font-size: 1.1rem;
   position: fixed;
@@ -30,6 +30,7 @@
   top: 0;
   height: 100vh;
   width: 25vw;
+  padding: 0;
   text-align: center;
   display: flex;
   align-items: center;
@@ -37,10 +38,6 @@
   z-index: 1000;
   animation: side-enter 0.3s ease;
   box-shadow: 2px 0 4px rgba(0,0,0,0.1);
-}
-
-.side-banner.transition-on {
-  transition: height 0.3s ease;
 }
 
 @keyframes side-enter {
