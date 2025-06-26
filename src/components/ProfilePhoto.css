@@ -4,21 +4,43 @@
 }
 
 .profile-wrapper.landscape {
-  top: 20px;
-  left: 20px;
+  top: 3vw;
+  left: 2vw;
+  width: 20vw;
+  height: 20vw;
+  animation: landscape-enter 0.1s ease;
+}
+
+@keyframes landscape-enter {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 2vw;
+  }
 }
 
 .profile-wrapper.portrait {
-  top: 20vh;
+  top: 18vh;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 25vh;
+  height: 25vh;
+  transition: all 0.3s ease;
+}
+
+.profile-wrapper.portrait.scrolled {
+  top: 8vh;
+  width: 10vh;
+  height: 10vh;
 }
 
 .profile-image {
-  width: min(25vw, 25vh);
-  height: min(25vw, 25vh);
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
   border: 3px solid #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
