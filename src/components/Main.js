@@ -3,15 +3,15 @@ import './Main.css';
 
 const Main = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > window.innerHeight);
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth > window.innerHeight);
+      setIsLandscape(window.innerWidth > window.innerHeight);
     };
 
     const handleScroll = () => {
-      if (!isWideScreen) {
+      if (!isLandscape) {
         setIsScrolled(window.scrollY > 10);
       }
     };
@@ -23,9 +23,9 @@ const Main = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isWideScreen]);
+  }, [isLandscape]);
 
-  const mainClass = isWideScreen ? `side-banner-main` : `top-banner-main${isScrolled ? ' scrolled' : ''}`;
+  const mainClass = isLandscape ? `side-banner-main` : `top-banner-main${isScrolled ? ' scrolled' : ''}`;
 
   return (
     <div className={mainClass}>

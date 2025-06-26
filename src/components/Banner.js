@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './Banner.css';
+import './ProfilePhoto.css';
+import profileImage from './profile.jpg';
 
 const Banner = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > window.innerHeight);
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth > window.innerHeight);
+      setIsLandscape(window.innerWidth > window.innerHeight);
     };
 
     const handleScroll = () => {
-      if (!isWideScreen) {
+      if (!isLandscape) {
         setIsScrolled(window.scrollY > 10);
       }
     };
@@ -23,12 +25,15 @@ const Banner = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isWideScreen]);
+  }, [isLandscape]);
 
-  const bannerClass = isWideScreen ? `side-banner` : `top-banner${isScrolled ? ' scrolled' : ''}`;
+  const bannerClass = isLandscape ? `side-banner` : `top-banner${isScrolled ? ' scrolled' : ''}`;
 
   return (
     <div className={bannerClass}>
+	  <div className={`profile-wrapper ${isLandscape ? 'landscape' : 'portrait'}`}>
+        <img src={profileImage} alt="Profile" className="profile-image" />
+      </div>
       <p>banner</p>
     </div>
   );
