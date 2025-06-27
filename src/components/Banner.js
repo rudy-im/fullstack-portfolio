@@ -35,7 +35,11 @@ const Banner = () => {
 	  <div className={profileWrapperClass}>
         <img src={profileImage} alt="Profile" className="profile-image" />
       </div>
-      <p>banner</p>
+      <div className="banner-title">
+	    <div>Rudy Im</div>
+	    <div>Fullstack Developer</div>
+	    <button>Download Resume</button>
+	  </div>
     </div>
   );
 };
