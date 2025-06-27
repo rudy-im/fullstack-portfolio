@@ -27,7 +27,7 @@ const Banner = () => {
     };
   }, [isLandscape]);
 
-  const bannerClass = isLandscape ? `side-banner` : `top-banner${isScrolled ? ' scrolled' : ''}`;
+  const bannerClass = isLandscape ? `banner side` : `banner top${isScrolled ? ' scrolled' : ''}`;
   const profileWrapperClass = 'profile-wrapper ' + (isLandscape ? 'landscape' : `portrait${isScrolled ? ' scrolled' : ''}`);
 
   return (
