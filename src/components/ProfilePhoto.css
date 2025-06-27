@@ -5,9 +5,9 @@
 
 .profile-wrapper.landscape {
   top: 3vw;
-  left: 2vw;
-  width: 20vw;
-  height: 20vw;
+  left: 5vw;
+  width: 15vw;
+  height: 15vw;
   animation: landscape-enter 0.1s ease;
 }
 
@@ -24,8 +24,8 @@
   top: 18vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25vh;
-  height: 25vh;
+  width: 20vh;
+  height: 20vh;
   transition: all 0.3s ease;
 }
 
