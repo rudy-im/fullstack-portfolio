@@ -25,7 +25,7 @@ const Main = () => {
     };
   }, [isLandscape]);
 
-  const mainClass = isLandscape ? `side-banner-main` : `top-banner-main${isScrolled ? ' scrolled' : ''}`;
+  const mainClass = isLandscape ? `main side-banner` : `main top-banner${isScrolled ? ' scrolled' : ''}`;
 
   return (
     <div className={mainClass}>
