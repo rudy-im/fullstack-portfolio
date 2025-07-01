@@ -1,67 +1,78 @@
 
 .banner {
-  background-color: #ffcc00;
-  color: #333333;
-  position: fixed;
-  z-index: 1;
-  box-shadow: 0 2px 40px rgba(0,0,0,0.3);
-  padding: 0;
-  margin: 0;
+	background-color: #ffcc00;
+	color: #333333;
+	position: fixed;
+	z-index: 1;
+	box-shadow: 0 2px 40px rgba(0,0,0,0.3);
+	padding: 0;
+	margin: 0;
 }
 
 .banner.top {
-  top: 0;
-  width: 100%;
-  height: 25vh;
-  transition: all 0.3s ease;
-  font-size: 3vh;
+	top: 0;
+	width: 100%;
+	height: 25vh;
+	transition: all 0.3s ease;
+	font-size: 3vh;
 }
 
 .banner.top.scrolled {
-  height: 10vh;
-  font-size: 1.5vh;
+	height: 10vh;
+	font-size: 1.5vh;
 }
 
 .banner.side {
-  font-size: 2vw;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 25vw;
-  animation: side-enter 0.3s ease;
+	font-size: 2vw;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 25vw;
+	animation: side-enter 0.3s ease;
 }
 
 @keyframes side-enter {
-  from {
-    height: 25vh;
-  }
-  to {
-    height: 100vh;
-  }
+	from {
+		height: 25vh;
+	}
+	to {
+		height: 100vh;
+	}
 }
 
 .banner-title {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: white;
 }
 
 .banner-title.top {
 	left: 0;
 	width: 40vw;
 	height: 100%;
-	background-color: white;
 }
 
 .banner-title.side {
 	top: 20vw;
 	width: 100%;
 	height: 15vw;
-	background-color: white;
 }
 
-.name {
-	font-size: 2em;
+.banner-title .name {
+	font-size: 1.8em;
+}
+
+.banner button {
+	font-size: 0.7em;
+	font-weight: bold;
+	margin-top: 0.7em;
+	padding: 0.5em 1.5em;
+	color: #ee1111;
+	background-color: #ffeeee;
+	border: 0.3em solid #ee1111;
+	border-radius: 0.5em;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
