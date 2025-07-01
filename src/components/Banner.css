@@ -10,31 +10,24 @@
 }
 
 .banner.top {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
   top: 0;
   width: 100%;
   height: 25vh;
   transition: all 0.3s ease;
+  font-size: 3vh;
 }
 
 .banner.top.scrolled {
-  font-size: 0.95rem;
   height: 10vh;
+  font-size: 1.5vh;
 }
 
 .banner.side {
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 2vw;
   left: 0;
   top: 0;
   height: 100vh;
   width: 25vw;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   animation: side-enter 0.3s ease;
 }
 
@@ -48,8 +41,27 @@
 }
 
 .banner-title {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.banner-title.top {
+	left: 0;
+	width: 40vw;
+	height: 100%;
+	background-color: white;
+}
+
+.banner-title.side {
+	top: 20vw;
+	width: 100%;
+	height: 15vw;
+	background-color: white;
+}
+
+.name {
+	font-size: 2em;
 }

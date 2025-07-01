@@ -29,14 +29,15 @@ const Banner = () => {
 
   const bannerClass = isLandscape ? `banner side` : `banner top${isScrolled ? ' scrolled' : ''}`;
   const profileWrapperClass = 'profile-wrapper ' + (isLandscape ? 'landscape' : `portrait${isScrolled ? ' scrolled' : ''}`);
+  const bannerTitleClass = 'banner-title ' + (isLandscape ? 'side' : 'top');
 
   return (
     <div className={bannerClass}>
 	  <div className={profileWrapperClass}>
         <img src={profileImage} alt="Profile" className="profile-image" />
       </div>
-      <div className="banner-title">
-	    <div>Rudy Im</div>
+      <div className={bannerTitleClass}>
+	    <div className="name">Rudy <b>Im</b></div>
 	    <div>Fullstack Developer</div>
 	    <button>Download Resume</button>
 	  </div>
