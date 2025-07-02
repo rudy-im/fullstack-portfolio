@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Banner.css';
 import './ProfilePhoto.css';
-import profileImage from './profile.jpg';
+
+import profileImage from '../assets/images/profile.jpg';
+import { ReactComponent as OutlookIcon } from '../assets/icons/Outlook.svg'
+import { ReactComponent as LinkedInIcon } from '../assets/icons/LinkedIn.svg'
+import { ReactComponent as GithubIcon } from '../assets/icons/Github.svg'
 
 const Banner = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +34,7 @@ const Banner = () => {
   const bannerClass = isLandscape ? `banner side` : `banner top${isScrolled ? ' scrolled' : ''}`;
   const profileWrapperClass = 'profile-wrapper ' + (isLandscape ? 'landscape' : `portrait${isScrolled ? ' scrolled' : ''}`);
   const bannerTitleClass = 'banner-title ' + (isLandscape ? 'side' : 'top');
+  const contactClass = 'contact ' + (isLandscape ? 'side' : 'top');
 
   return (
     <div className={bannerClass}>
@@ -38,8 +43,16 @@ const Banner = () => {
       </div>
       <div className={bannerTitleClass}>
 	    <div className="name">Rudy <b>Im</b></div>
-	    <div>Fullstack Developer</div>
+	    <div className="position">Fullstack Developer</div>
 	    <button>Download Resume</button>
+	  </div>
+	  <div className={contactClass}>
+		<div className="email">rudy.im@outlook.com</div>
+		<div className="icons">
+			<OutlookIcon width="2.5em" height="2.5em" fill="black" />
+			<LinkedInIcon width="2em" height="2em" fill="black" />
+			<GithubIcon width="2.7em" height="2.7em" fill="black" />
+		</div>
 	  </div>
     </div>
   );
