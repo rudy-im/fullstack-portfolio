@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/fullstack-portfolio/static/css/main.d906e8c1.css",
-    "main.js": "/fullstack-portfolio/static/js/main.25e4d4ae.js",
+    "main.css": "/fullstack-portfolio/static/css/main.e65db94f.css",
+    "main.js": "/fullstack-portfolio/static/js/main.7206a26d.js",
     "static/js/453.d8d3b899.chunk.js": "/fullstack-portfolio/static/js/453.d8d3b899.chunk.js",
     "static/media/profile.jpg": "/fullstack-portfolio/static/media/profile.7fee65320f09acf4f443.jpg",
     "static/media/Outlook.svg": "/fullstack-portfolio/static/media/Outlook.9b7c935c35ab7affe965a3425c25e8f0.svg",
     "static/media/Github.svg": "/fullstack-portfolio/static/media/Github.adc840a323814fbbd9d37a462408670e.svg",
     "index.html": "/fullstack-portfolio/index.html",
     "static/media/LinkedIn.svg": "/fullstack-portfolio/static/media/LinkedIn.98956d298e14a6384fdb39c42269f2f2.svg",
-    "main.d906e8c1.css.map": "/fullstack-portfolio/static/css/main.d906e8c1.css.map",
-    "main.25e4d4ae.js.map": "/fullstack-portfolio/static/js/main.25e4d4ae.js.map",
+    "main.e65db94f.css.map": "/fullstack-portfolio/static/css/main.e65db94f.css.map",
+    "main.7206a26d.js.map": "/fullstack-portfolio/static/js/main.7206a26d.js.map",
     "453.d8d3b899.chunk.js.map": "/fullstack-portfolio/static/js/453.d8d3b899.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d906e8c1.css",
-    "static/js/main.25e4d4ae.js"
+    "static/css/main.e65db94f.css",
+    "static/js/main.7206a26d.js"
   ]
 }
