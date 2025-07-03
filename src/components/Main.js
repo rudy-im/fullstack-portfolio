@@ -32,6 +32,9 @@ const Main = () => {
 	  <div className="section top"></div>
 	  <div className="section white">
 		<h1>PROFILE</h1>
+		I am a motivated developer, at the beginning of my career. Though it doesn’t mean I have little experience with programming. With educational background, I’ve enjoyed developing apps and writing scripts to satisfy my own needs and curiosity.
+		<br /><br />
+		I'm actively looking for ways to use my skills to help others. I’d love to connect with you!
 	  </div>
 	  <div className="section"><h1>PROJECT</h1></div>
 	  <div className="section white"><h1>TECHNICAL STACK</h1></div>
