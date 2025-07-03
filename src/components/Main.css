@@ -3,6 +3,8 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .main.top-banner {
@@ -19,4 +21,24 @@
 	margin-left: 25vw;
 	width: calc(100vw - 25vw);
 	min-height: 100vh;
+}
+
+.section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.section.top {
+	aspect-ratio: 16 / 1;
+}
+
+.section.white {
+	aspect-ratio: 16 / 9;
+	background-color: white;
+}
+
+.section.dark {
+	aspect-ratio: 16 / 9;
+	background-color: navy;
 }

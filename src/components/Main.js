@@ -29,9 +29,13 @@ const Main = () => {
 
   return (
     <div className={mainClass}>
-      {Array.from({ length: 100 }).map((_, i) => (
-	    <div key={i}>test {i}</div>
-	  ))}
+	  <div className="section top"></div>
+	  <div className="section white">
+		<h1>PROFILE</h1>
+	  </div>
+	  <div className="section"><h1>PROJECT</h1></div>
+	  <div className="section white"><h1>TECHNICAL STACK</h1></div>
+	  <div className="section dark"><h1>Get in touch!</h1></div>
     </div>
   );
 };
