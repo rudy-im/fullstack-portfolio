@@ -8,4 +8,5 @@ html, body, #root {
 
 html {
   overflow-x: hidden;
+  font-size: min(3vw, 3vh);
 }

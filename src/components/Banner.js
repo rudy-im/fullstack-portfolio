@@ -49,9 +49,9 @@ const Banner = () => {
 	  <div className={contactClass}>
 		<div className="email">rudy.im@outlook.com</div>
 		<div className="icons">
-			<OutlookIcon width="2.5em" height="2.5em" fill="black" />
-			<LinkedInIcon width="2em" height="2em" fill="black" />
-			<GithubIcon width="2.7em" height="2.7em" fill="black" />
+			<OutlookIcon width="2rem" height="2rem" fill="black" />
+			<LinkedInIcon width="1.7rem" height="1.7rem" fill="black" />
+			<GithubIcon width="2rem" height="2rem" fill="black" />
 		</div>
 	  </div>
     </div>
