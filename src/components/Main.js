@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Main.css';
 
 import Skill from './Skill';
+import EmailSender from './EmailSender';
 import { ReactComponent as OutlookIcon } from '../assets/icons/Outlook.svg'
 
 const Main = () => {
@@ -48,7 +49,10 @@ const Main = () => {
 		  <Skill title="3" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 	    </div>
 	  </div>
-	  <div className="section dark"><h1>Get in touch!</h1></div>
+	  <div className="section dark">
+	    <h1>Get in touch!</h1>
+		<EmailSender />
+	  </div>
     </div>
   );
 };
