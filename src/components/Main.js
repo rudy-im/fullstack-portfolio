@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css';
 
+import Skill from './Skill';
+import { ReactComponent as OutlookIcon } from '../assets/icons/Outlook.svg'
+
 const Main = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
@@ -40,11 +43,9 @@ const Main = () => {
 	  <div className="section white">
 	    <h1>TECHNICAL STACK</h1>
 		<div class="skill-container">
-		  <div class="skill">1</div>
-		  <div class="skill">2</div>
-		  <div class="skill">3</div>
-		  <div class="skill">4</div>
-		  <div class="skill">5</div>
+		  <Skill title="1" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="2" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="3" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 	    </div>
 	  </div>
 	  <div className="section dark"><h1>Get in touch!</h1></div>

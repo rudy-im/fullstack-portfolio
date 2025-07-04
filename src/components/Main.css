@@ -53,12 +53,3 @@
 	box-sizing: border-box;
 	width: 90%;
 }
-
-.skill {
-	height: 150px;
-	background: lightcoral;
-	text-align: center;
-	font-weight: bold;
-	transition: all 0.3s ease;
-	margin: min(1vw, 1vh);
-}
