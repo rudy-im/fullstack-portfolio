@@ -26,7 +26,10 @@
 .section {
 	width: 100%;
 	margin: 0;
-	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .section.top {
@@ -41,4 +44,21 @@
 .section.dark {
 	aspect-ratio: 16 / 9;
 	background-color: navy;
+}
+
+.skill-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	overflow-y: auto;
+	box-sizing: border-box;
+	width: 90%;
+}
+
+.skill {
+	height: 150px;
+	background: lightcoral;
+	text-align: center;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	margin: min(1vw, 1vh);
 }

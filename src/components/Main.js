@@ -37,7 +37,16 @@ const Main = () => {
 		I'm actively looking for ways to use my skills to help others. I’d love to connect with you!
 	  </div>
 	  <div className="section"><h1>PROJECT</h1></div>
-	  <div className="section white"><h1>TECHNICAL STACK</h1></div>
+	  <div className="section white">
+	    <h1>TECHNICAL STACK</h1>
+		<div class="skill-container">
+		  <div class="skill">1</div>
+		  <div class="skill">2</div>
+		  <div class="skill">3</div>
+		  <div class="skill">4</div>
+		  <div class="skill">5</div>
+	    </div>
+	  </div>
 	  <div className="section dark"><h1>Get in touch!</h1></div>
     </div>
   );
