@@ -3,6 +3,7 @@
 	text-align: center;
 	transition: all 0.3s ease;
 	margin: min(1vw, 1vh);
+	margin-bottom: min(5vw, 5vh);
 	padding: 1em 0;
 	border-radius: 2em;
 	box-shadow: 0 2px 20px rgba(0,0,0,0.3);

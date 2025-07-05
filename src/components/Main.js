@@ -30,6 +30,7 @@ const Main = () => {
   }, [isLandscape]);
 
   const mainClass = isLandscape ? `main side-banner` : `main top-banner${isScrolled ? ' scrolled' : ''}`;
+  const skillContainerClass = isLandscape ? 'skill-container landscape' : 'skill-container portrait';
 
   return (
     <div className={mainClass}>
@@ -43,10 +44,11 @@ const Main = () => {
 	  <div className="section"><h1>PROJECT</h1></div>
 	  <div className="section white">
 	    <h1>TECHNICAL STACK</h1>
-		<div class="skill-container">
-		  <Skill title="Languages & Frameworks" skills="Python;C#;Java;HTML;CSS;JavaScript;PHP"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
-		  <Skill title="Front-End" skills="React;Redux;Bootstrap;JQuery"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		<div className={skillContainerClass}>
+		  <Skill title="Languages & Frameworks" skills="Python;C#;Java;SQL;HTML;CSS;JavaScript;PHP"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="Front-End" skills="React;Redux;Bootstrap;JQuery;Figma"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 		  <Skill title="Back-End & Databases" skills="Node/Express;PostgreSQL;SQLite"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="QA" skills="MochaChai"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 	    </div>
 	  </div>
 	  <div className="section dark">
