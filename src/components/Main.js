@@ -44,9 +44,9 @@ const Main = () => {
 	  <div className="section white">
 	    <h1>TECHNICAL STACK</h1>
 		<div class="skill-container">
-		  <Skill title="1" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
-		  <Skill title="2" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
-		  <Skill title="3" skills="a;b;c"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="Languages & Frameworks" skills="Python;C#;Java;HTML;CSS;JavaScript;PHP"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="Front-End" skills="React;Redux;Bootstrap;JQuery"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="Back-End & Databases" skills="Node/Express;PostgreSQL;SQLite"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 	    </div>
 	  </div>
 	  <div className="section dark">
