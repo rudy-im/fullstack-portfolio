@@ -6,15 +6,15 @@ const Skill = ({title, skills, children}) => {
   return (
     <div className="skill">
 	  {children && <div className="skill-icon">{children}</div>}
-      {title && <h2>{title}</h2>}
+      {title && <div className="skill-title">{title}</div>}
 
-      <div className="skills">
-        {items.map((item, index) => (
-          <div key={index} className="skills-item">
-            {item}
-          </div>
-        ))}
-      </div>
+
+      {items.map((item, index) => (
+        <div key={index} className="skills-item">
+          {item}
+        </div>
+      ))}
+
     </div>
   );
 };
