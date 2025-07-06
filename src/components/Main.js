@@ -49,8 +49,10 @@ const Main = () => {
 		  <Skill title="Front-End" skills="React;Redux;Bootstrap;JQuery;Figma"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 		  <Skill title="Back-End & Databases" skills="Node/Express;PostgreSQL;SQLite"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 		  <Skill title="QA" skills="MochaChai"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
+		  <Skill title="Tools" skills="Git/GitBash;Linux/Ubuntu;"><OutlookIcon width="2rem" height="2rem" fill="black" /></Skill>
 	    </div>
 	  </div>
+	  <div className="section"><h1>CERTIFICATES</h1></div>
 	  <div className="section dark">
 	    <h1>Get in touch!</h1>
 		<EmailSender />
