@@ -5,43 +5,52 @@ import './EmailSender.css';
 
 const EmailSender = () => {
   const recaptchaRef = useRef();
-  const [captchaValid, setCaptchaValid] = useState(false);
   const formRef = useRef();
   const [status, setStatus] = useState('');
-  
-  
-  const handleCaptchaChange = (value) => {
-    setCaptchaValid(!!value);
-  };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 	
-	if (!captchaValid) {
-      alert("Please prove you are not a bot.");
-      return;
-    }
-	
-	const form = e.target;
-	form.time.value = new Date().toLocaleString();
+	const recaptchaToken = recaptchaRef.current.getValue();
+	  if (!recaptchaToken) {
+		alert("Please prove you are not a bot.");
+		return;
+	  }
 
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-	  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      formRef.current,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    )
-    .then(
-      () => {
-        setStatus('Your message is sent.');
-        formRef.current.reset();
-		recaptchaRef.current.reset();
-      },
-      (error) => {
-        setStatus('Failed!! Please retry.');
-        console.error(error);
-      }
-    );
+	  try {		
+		const verifyResponse = await fetch("https://script.google.com/macros/s/AKfycbz5Z3g2u8LWfHgcRBqAW4GWmSGGQmTpA1-JjP_ZGM4xU9uPwNqr4SfAWhSGYha3BDqJ/exec", {
+		  method: "POST",
+		  body: recaptchaToken,
+		  headers: { "Content-Type": "text/plain" },
+		});
+
+		const verifyResult = await verifyResponse.json();
+
+		if (!verifyResult.success) {
+		  alert("reCAPTCHA verification failed.");
+		  return;
+		}
+
+/*
+		const form = e.target;
+		form.time.value = new Date().toLocaleString();
+
+		await emailjs.sendForm(
+		  process.env.REACT_APP_EMAILJS_SERVICE_ID,
+		  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+		  formRef.current,
+		  process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+		);
+
+		setStatus("Your message is sent.");
+		formRef.current.reset();
+		recaptchaRef.current.reset();*/
+
+	  } catch (error) {
+		console.error(error);
+		setStatus("Failed!! Please retry.");
+	  }
+	  
   };
 
   return (
@@ -58,7 +67,6 @@ const EmailSender = () => {
 		<ReCAPTCHA
           ref={recaptchaRef}
           sitekey="6LcmHHcrAAAAALq1ZFXScQndsIhe-tHDkOnrh5DZ"
-          onChange={handleCaptchaChange}
         />
 	  
         <button type="submit" className="submit">Send</button>
